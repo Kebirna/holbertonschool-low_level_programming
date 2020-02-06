@@ -1,7 +1,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
+/**
+ * Random number call - It says wheter a random number is positive, negative or zero
+ * Return = 0
+*/
 
 /* betty style doc for function main goes there */
 int main(void)
