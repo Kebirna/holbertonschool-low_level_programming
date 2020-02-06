@@ -1,3 +1,8 @@
+#include <stdio.h>
+#include <string.h>
+
+/*Prints a string with puts function*/
+
 int main(void)
 {
 	char string[40];
