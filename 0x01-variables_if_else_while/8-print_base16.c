@@ -23,6 +23,6 @@ int main(void)
 	l++;
 	}
 	
-	printf("\n");
+	putchar('\n');
 return (0);
 }
