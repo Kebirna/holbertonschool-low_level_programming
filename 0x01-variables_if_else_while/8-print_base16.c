@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-  * main - It prints 0-9 int
+  * main - It prints hexadecimal #
   * Return:0
   */
 int main(void)
@@ -16,13 +16,13 @@ int main(void)
 	putchar(i);
 	i++;
 	}
-	
+
 	while (l <= 'f')
 	{
 	putchar(l);
 	l++;
 	}
-	
+
 	putchar('\n');
 return (0);
 }
