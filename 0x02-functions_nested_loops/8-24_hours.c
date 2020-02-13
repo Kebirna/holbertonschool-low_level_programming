@@ -1,8 +1,7 @@
 #include "holberton.h"
 /**
- * print_last_digit - prints the last #
- *
- *Return: 0;
+ * jack_bauer - prints the last #
+ * Return: 0;
  */
 
 void jack_bauer(void)

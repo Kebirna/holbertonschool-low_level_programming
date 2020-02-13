@@ -1,14 +1,15 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
- * print_alphabet_x10 - uses the print_alphabet func
+ * print_alphabet x10 - uses the print_alphabet func
  *
- * Return: nothing
+ *Return: nothing
  */
 
 void print_alphabet_x10(void)
 {
-	int rank;
+	int rank; 
 	int letter;
 
 	rank = 0;

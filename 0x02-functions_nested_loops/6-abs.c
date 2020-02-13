@@ -3,9 +3,9 @@
 #include <stdlib.h>
 
 /**
- * abs - prints the absolute value of an int
- *
- *Return: 0;
+ * _abs - prints the absolute value of an int
+ * @r: test integer
+ * Return: 0;
  */
 
 int _abs(int r)
@@ -14,6 +14,6 @@ int _abs(int r)
 
 	absolute = abs(r);
 
-	return(absolute);
-	_putchar('\n');	
-}	
+	return (absolute);
+	_putchar('\n');
+}
