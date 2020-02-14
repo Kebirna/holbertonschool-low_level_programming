@@ -1,8 +1,8 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * fizz_buzz - prints fizz and buzz according to multiples of 5 and 3
- *
+ * main - prints fizz and buzz according to multiples of 5 and 3
+ * Return: none
  */
 int main(void)
 {
