@@ -14,13 +14,11 @@ void puts2(char *str)
 
 	while (str[pace] != '\0')
 	{
-		_putchar(str[pace]);
-
-		if (pace <= 8)
+		if (pace % 2 == 0)
 		{
-		pace += 2;
+		_putchar(str[pace]);
 		}
+		pace++;
 	}
-
 	_putchar('\n');
 }
