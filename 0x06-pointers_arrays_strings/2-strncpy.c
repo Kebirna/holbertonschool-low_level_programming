@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * *_strncpy - concatenates two strings limiting by # of bytes
+ * *_strncpy - copies two strings limiting by # of bytes
  * @dest: pointer to the destiny string
  * @src: pointer to the source string
  * @n: # of bytes to be used from src
@@ -13,10 +13,11 @@ char *_strncpy(char *dest, char *src, int n)
 
 	int i;
 
-	for (i = 0; i < n && i != '\0'; i++)
+	for (i = 0; i < n && src[i] != '\0'; i++)
 	{
 		dest[i] = src[i];
 	}
+
 	for (; i < n; i++)
 	{
 		dest[i] = '\0';
