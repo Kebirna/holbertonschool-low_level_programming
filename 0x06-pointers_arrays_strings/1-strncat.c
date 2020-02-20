@@ -14,12 +14,8 @@ char *_strncat(char *dest, char *src, int n)
 	int i;
 
 	j = 0;
-	i = 0;
+	i = 0; /* counts the destination size */
 
-	if (n > 7)
-	{
-		n = 7;
-	}
 	while (dest[i] != '\0')
 	{
 		i++;
