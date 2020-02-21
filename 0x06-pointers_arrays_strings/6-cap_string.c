@@ -11,9 +11,9 @@ char *cap_string(char *a)
 {
 	int i;
 	int j;
-	int clues[] = {32, 9, '\n', 44, 59, 46, 33, 63, 34, 40, 41, 123, 125}; /* Not sure if is char o int*/
+	int clues[] = {32, 9, '\n', 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	i = 0; 
+	i = 0;
 	j = 0;
 
 	while (a[i] != '\0')
