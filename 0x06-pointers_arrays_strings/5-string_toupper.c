@@ -10,6 +10,7 @@
 char *string_toupper(char *a)
 {
 	int i;
+
 	i = 0;
 
 	while (a[i] != '\0' && a[i] >= 'a' && a[i] <= 'z')
@@ -20,5 +21,5 @@ char *string_toupper(char *a)
 		}
 	}
 	i++;
-	return(a);
+	return (a);
 }
