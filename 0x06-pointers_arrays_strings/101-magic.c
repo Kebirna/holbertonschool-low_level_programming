@@ -1,12 +1,3 @@
-#include "holberton.h"
-
-/**
- * *rot13 - Encodes a string to rot13
- * @a: pointer to the string to be changed
- * Return: the character changed
- *
- */
-
 #include <stdio.h>
 
 int main(void)
