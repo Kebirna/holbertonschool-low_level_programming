@@ -2,9 +2,11 @@
 #define _HOLBERTON_H
 
 /**
- * Structs, enums and unions definitions
+ * holberton.h - Header created by Holberton Student
  * Typedefs
  * Function prototypes
+ * @c: variable to input
+ * Return: returns 0 as correct
  */
 
 int _putchar(char c);
