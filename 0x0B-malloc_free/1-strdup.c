@@ -15,14 +15,14 @@ char *_strdup(char *str)
 	int i;
 	int j;
 
-	i = 1;
+	i = 0;
 	j = 0;
 
 	while (str[i] != '\0')
 	{
 		i++;
 	}
-	if (i == 1)
+	if (i == 0)
 	{
 		return (NULL);
 	}
