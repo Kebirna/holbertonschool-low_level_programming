@@ -19,13 +19,14 @@ char *_strdup(char *str)
 	i = 0;
 	j = 0;
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+
 	while (str[i] != '\0')
 	{
 		i++;
-	}
-	if (i == 0)
-	{
-		return (NULL);
 	}
 	i += 1;
 
