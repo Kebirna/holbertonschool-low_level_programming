@@ -3,35 +3,30 @@
 #include <stdlib.h>
 
 /**
- * array_iterator - loops in an array and sends each element to function
+ * int_index - points to different functions to use their resultsn
  * @array: name of the array to be proccessed
  * @size: size of the array
- * @action: pointer to the function to be activated
- * Return: Nothing
+ * @cmp: pointer to the function to be activated
+ * Return: index # for success, -1 for error
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int counter;
-	int pre_result;
 
+	if (size <= 0)
+		return (-1);
 
-	if(size <= 0)
-		return(-1);
-
-	if(array && cmp)
+	if (array && cmp)
 	{
 		counter = 0;
 
-		while(counter <=size)
+		while (counter < size)
 		{
-			pre_result =(*cmp) (array[counter]);
-			if(pre_result != 0)
-					return(counter);
+			if (cmp(array[counter]))
+				return (counter);
 			counter++;
 		}
-		return(-1);
 	}
-	else
-	exit(1);
+	return (-1);
 }
