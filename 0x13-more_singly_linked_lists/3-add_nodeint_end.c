@@ -18,21 +18,20 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 
 	new_node->n = n;
 	new_node->next = NULL;
-	
+
 	if (*head ==  NULL)/*Works! Head can only be NULL or a direction*/
 	{
 		*head = new_node;
 	}
 	else
 	{
-		temporal = *head;/*temporal will loop-point to the nodes*/
+		temporal = *head;/*temporal will loop through to the nodes*/
 
-		while (temporal-> next != NULL)
+		while (temporal->next != NULL)
 		{
-			temporal = temporal-> next;/*This loops, changing the pointer*/ 
+			temporal = temporal->next;/*This loops, changing the pointer*/
 		}
 		temporal->next = new_node;
-	
 	}
 	return (new_node);
 }
