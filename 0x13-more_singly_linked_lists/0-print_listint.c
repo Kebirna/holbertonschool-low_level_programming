@@ -8,7 +8,7 @@
 
 size_t print_listint(const listint_t *h)
 {
-	unsigned long int counter;
+	size_t counter;
 
 	while (h != NULL)
 	{
