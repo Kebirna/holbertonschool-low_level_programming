@@ -12,9 +12,9 @@ void free_listint2(listint_t **head)
 	if (!head)
 		return;
 
-	free_listint2(&(*head)->next);/*Why it is &?*/
+	if ((*head)->next)
+		free_listint2(&(*head)->next);/*Why it is &?*/
 
 	free((*head));
-	(*head) = NULL;
-	 /*Not sure if it should be "**"*/
+	*head = NULL;/*Not sure if it should be "**"*/
 }
