@@ -9,14 +9,15 @@
 
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int num;
+	unsigned long int mask;
 
-	if (!n)
+	if (index > (8 * (sizeof(unsigned long int) - 1)))
 		return (-1);
 
-	num = 0 << index;/*Create a sequence with 1 at the index place*/
+	mask = 1;/*Create a mask with 1 at the index place*/
+	mask = mask << index;
 
-	*n = *n & num;
+	*n = *n & ~mask;
 
 	return (1);
 }
