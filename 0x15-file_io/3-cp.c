@@ -37,13 +37,11 @@ void close_function(int from, int to)
  */
 int main(int argc, char **argv)
 {
-	int fd_from = -1, fd_to = -1, i = 0;
-	ssize_t let_readed = 0;
+	int fd_from = -1, fd_to = -1, buf_count = 1024;
+	ssize_t let_readed = 1024, let_written = 0;
 	char *from_file = (*(argv + 1)), *to_file = (*(argv + 2));
 	char buffer[1024];
 
-	while (i++ < 1024)
-		buffer[i] = '\0';
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -55,19 +53,24 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", from_file);
 		exit(98);
 	}
-	let_readed = read(fd_from, buffer, 1024);
 	if (let_readed < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", from_file);
 		exit(98);
 	}
 	fd_to = open(to_file, O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	while (let_readed == buf_count)
+	{
+		let_readed = read(fd_from, buffer, buf_count);
+		let_written = write(fd_to, buffer, let_readed);
+	}
 	if (fd_to < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", to_file);
 		exit(99);
 	}
-	write(fd_to, buffer, 1024);
 	close_function(fd_from, fd_to);
+	if (let_readed != let_written)
+		return (0);
 return (1);
 }
