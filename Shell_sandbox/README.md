@@ -53,8 +53,10 @@ Please read CONTRIBUTING.md for details on our code of conduct, and the process 
 We use SemVer for versioning. For the versions available, see the tags on this repository.
 
 ## Authors
-Ricardo Hincapie - Holberton Student - [@RicarHincapie] (https://www.linkedin.com/in/ricardohincapie/)
-Juan Felipe Bustamante - Holberton Student - [@PipeBustamante] (https://www.linkedin.com/in/pipebustamantem/)
+Ricardo Hincapie - Holberton Student - [@RicarHincapie](https://www.linkedin.com/in/ricardohincapie/)
+
+Juan Felipe Bustamante - Holberton Student - [@PipeBustamante](https://www.linkedin.com/in/pipebustamantem/)
+
 See also the list of contributors who participated in this project.
 
 ## License
