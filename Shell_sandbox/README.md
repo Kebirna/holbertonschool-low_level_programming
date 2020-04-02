@@ -1,5 +1,4 @@
 #Holberton Shell
-
 This is a simple shell with basic functionality made for learning purposes
 
 ##Getting Started
