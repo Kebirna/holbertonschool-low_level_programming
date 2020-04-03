@@ -1,0 +1,37 @@
+.TH SIMPLE_SHELL 1 "April 2020" "Version 1.0" "SH General Comands Manual"
+
+.Sh NAME
+.B Simple Shell
+- Command interpreter simplyfied
+
+.SH SYNOPSIS
+.B [-aCefnuvxIimqVEb] [+aCefnuvxIimqVEb] 
+.R [-o option_name] [+o option_name] [command_file [argument ...]]
+
+.SH DESCRIPTION
+.B Simple Shell 
+- is a simple command interpreter for Linux 14.04 LTS. It provides a variety of functions that the actual DASH shell from Linux has.
+.PP
+It is the final project of the low-level study programm at Holberton School.
+
+.SH OPTIONS
+
+.SH ENVIRONMENT
+HOME Set automatically.
+
+PATH The default search path for executables.
+
+.SH EXIT STATUS
+
+Errors that are detected by the shell, such as a syntax error, will cause the Simple Shell to exit with a non-zero exit status.
+
+.SH SEE ALSO
+sh(1)
+
+.SH BUGS
+Does not have bugs at the moment
+
+.SH AUTHORS
+Ricardo Hincapie - (https://www.linkedin.com/in/ricardohincapie/)
+
+Juan Felipe Bustamante - (https://www.linkedin.com/in/pipebustamantem/)
