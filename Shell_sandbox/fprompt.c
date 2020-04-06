@@ -5,7 +5,8 @@
 #include <sys/wait.h>
 /*#include "holberton.h"*/
 
-int main(char *input)
+
+int main(int ac, char **av, char **env)
 {
 	char *buffer;
 	size_t bufsiz;
@@ -13,35 +14,21 @@ int main(char *input)
 	int counter;
 	char *token;
 	char delimiter[2] = " ";
+	char **args;  // args[0]= /bin/ls args[1]="-l" 
 
 	
 
 	while (1)
-	{
+	{	
 		pid_t pid = fork();
 		if (!pid)
 		{
-			counter = 0;		
-			buffer = malloc(sizeof(char) * bufsiz);
-			if (buffer == NULL)
-			{
-				return(-1);
-			}
+			args = NULL;
 			printf("$ ");
 			characters = getline(&buffer, &bufsiz, stdin);
-			if (characters != -1)
-			{
-				printf("%s\n", buffer);
-				/*break;*/
-			}
-			token = strtok(buffer, delimiter);
-			while (token != NULL)
-			{
-				printf("Token %i is %s\n",counter, token);
-				token = strtok(0, delimiter);
-				counter++;
-			}
-			free(buffer);
+			args = parsing(buffer, characters);
+			execve(args[0], args, NULL);
+			
 		}
 		else
 		{
