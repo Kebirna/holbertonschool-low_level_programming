@@ -38,9 +38,6 @@ Explain what these tests test and why
 
 Give an example
 
-## Deployment
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 Visual Basic Code
 Ubuntu 14.04 LTS
@@ -60,8 +57,7 @@ Juan Felipe Bustamante - Holberton Student - [@PipeBustamante](https://www.linke
 See also the list of contributors who participated in this project.
 
 ## License
-This project is not licensed
+This project is not licensed.
 
 ## Acknowledgments
-To our families, for whom all the effort is worth it. 
-
+To our families, for whom all the effort is worth it.
