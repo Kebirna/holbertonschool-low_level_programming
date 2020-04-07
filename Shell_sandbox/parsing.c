@@ -1,14 +1,42 @@
 #include "hsh.h"
 
-
-char **parsing(char *buffer, int characters)
+int necklace_pearls(char *buffer)
 {
-	char **token_necklace = malloc(sizeof(char *) * characters);
+	int pearls = 0;/*Counts the # of tokens*/
+	char *token = NULL;
+	char *delimiter = " :'\n''\t'";
+	int i = 0;
+	int j;
+
+	printf("Pearls: %d", pearls);
+	return(pearls);
+
+	/*printf("Buffer: %s ", buffer);
+	token = strtok(buffer, delimiter);
+	printf("Pointer: %p ", token);
+	if (token != NULL)
+		pearls++;
+
+	while(token != NULL)
+	{
+		token = strtok(NULL, delimiter);
+		pearls++;
+	}
+	printf("Pearls subfuc: %d ", pearls);
+	return(pearls + 1);*/
+}
+
+
+char **parsing(char *buffer, int characters) /*Characters are not needed*/
+{
+	char **token_necklace = NULL;
 	char *token;
 	char *delimiter = " :'\n''\t'";  //Review this behaivor 
-	int counter = 0;
+	int counter = 0, pearls = 0;
 
-	/*spaces = count_spaces(buffer);*/
+	pearls = necklace_pearls(buffer);
+	printf("Pearls count: %d ", pearls);
+	*token_necklace = malloc(sizeof(char *) * pearls);
 	if(token_necklace == NULL)
 	{
 		printf("Error");
