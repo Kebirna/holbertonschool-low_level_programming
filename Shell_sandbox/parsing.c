@@ -2,14 +2,27 @@
 
 int necklace_pearls(char *buffer)
 {
-	int pearls = 0;/*Counts the # of tokens*/
-	char *token = NULL;
+	int pearls = 0;
 	char *delimiter = " :'\n''\t'";
 	int i = 0;
-	int j;
+	int j = 0;
 
-	printf("Pearls: %d", pearls);
-	return(pearls);
+	while (buffer[i] != '\0')
+	{
+		
+		for (j = 0; delimiter[j] != '\0'; j++)
+		{
+			
+			if (buffer[i] == delimiter[j])
+			{
+				pearls++;
+				break;
+			}
+		}
+		i++;
+	}
+	
+	return(pearls + 1);
 
 	/*printf("Buffer: %s ", buffer);
 	token = strtok(buffer, delimiter);
@@ -34,9 +47,9 @@ char **parsing(char *buffer, int characters) /*Characters are not needed*/
 	char *delimiter = " :'\n''\t'";  //Review this behaivor 
 	int counter = 0, pearls = 0;
 
-	pearls = necklace_pearls(buffer);
-	printf("Pearls count: %d ", pearls);
-	*token_necklace = malloc(sizeof(char *) * pearls);
+	/*pearls = necklace_pearls(buffer);
+	printf("Pearls count: %d ", pearls);*/
+	*token_necklace = malloc(sizeof(char *) * characters);
 	if(token_necklace == NULL)
 	{
 		printf("Error");

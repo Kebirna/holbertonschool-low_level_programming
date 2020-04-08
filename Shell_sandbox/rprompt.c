@@ -16,14 +16,12 @@ int main(int ac, char **av, char **env)
 		pid_t pid = fork();
 		if (!pid)
 		{
-			
 			args = NULL;
 			printf("$ ");
 			characters = getline(&buffer, &bufsiz, stdin);
+			/*necklace_pearls(buffer);*/
 			args = parsing(buffer, characters);
-			exec_err = execve(args[0], args, NULL);
-			if (exec_err == -1)
-				printf("%s: command not found\n", args[0]);
+			execve(args[0], args, NULL);
 		}
 		else
 		{

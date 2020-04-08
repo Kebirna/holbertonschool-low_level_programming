@@ -10,5 +10,6 @@
 
 int necklace_pearls(char *buffer);
 char **parsing(char *buffer, int characters);
+int execo(char **args);
 
 #endif
