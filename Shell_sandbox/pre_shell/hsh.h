@@ -7,7 +7,8 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <sys/types.h>
-
+int non_interactive_mode();
+int _interactive(char **av __attribute__((unused)));
 int necklace_pearls(char *buffer);
 char **parsing(char *buffer, int characters);
 int execo(char **args);
