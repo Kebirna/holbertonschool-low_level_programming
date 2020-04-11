@@ -15,13 +15,16 @@ int _interactive(char **av __attribute__((unused)))
 			size = necklace_pearls(buffer);
 			args = parsing(buffer, size);
 			execo(args);
+			freedom(args, size);
+			free(buffer);
 		}
 		else
 		{
 			write(STDOUT_FILENO, "\n", 1);
+
 			break;
-		}
-		
+		}	
 	}
-return(0);
+	
+	return (0);
 }
