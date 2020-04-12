@@ -3,12 +3,6 @@
 int execo(char **args)
 {
 	int status;
-	char **path = NULL;
-	char *tmp = NULL;
-
-	path = _path();
-	tmp = _insert_path(args, path);
-	args[0] = tmp;
 	pid_t pid = fork();
 
 	if (!pid)

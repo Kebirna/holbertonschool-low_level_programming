@@ -12,9 +12,9 @@
 int non_interactive_mode();
 int _interactive(char **av __attribute__((unused)));
 int necklace_pearls(char *buffer);
-char **parsing(char *buffer, int characters);
+char **parsing(char *buffer, int characters, int path_size);
 int execo(char **args);
 char **_path();
-char *_insert_path(char **args, char **path);
+char **_insert_path(char **args, char **path);
 
 #endif
