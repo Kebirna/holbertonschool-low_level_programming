@@ -1,7 +1,5 @@
 #include "hsh.h"
 
-extern char **environ;/*takes the environment variable*/
-
 int necklace_pearls(char *buffer)
 {
 	int pearls = 0;
@@ -21,35 +19,30 @@ int necklace_pearls(char *buffer)
 		}
 		i++;
 	}
-	return (pearls);
+	return (pearls + 1);
 }
 
-char **parsing(char *buffer, int characters, int size_path)
+char **parsing(char *buffer, int characters)
+{
+	char **token_necklace = malloc(sizeof(char *) * 1024);
+	char *token;
+	char *delimiter = " :'\n''\t'";
+	int counter = 0;
+
+
+	if (token_necklace == NULL)
 	{
-		char **token_necklace = malloc(sizeof(char *) * characters);
-		char *token;
-		char *delimiter = " :'\n''\t'";
-		int counter = 0;
-		char **path = NULL;
-		char **args = NULL;
-
-		if (token_necklace == NULL)
-		{
-			printf("Error");
-			return (NULL);
-		}
-		token = strtok(buffer, delimiter);
-		while (token != NULL)
-		{
-			token_necklace[counter] = strdup(token);
-			token = strtok(NULL, delimiter);
-			counter++;
-		}
-		token_necklace[counter] = token; /*Here are the args tokenized*/
-		
-		/*START OF THE PATH WORK*/
-		path = _path(size_path);
-		args = _insert_path(token_necklace, path);
-
-		return (args);
+		/*REQUEST TO CHANGE TO DEV TEAM: *PLEASE HANDLE ERROR*/
+		printf("Error");
+		return (NULL);
 	}
+	token = strtok(buffer, delimiter);
+	while (token != NULL)
+	{
+		token_necklace[counter] = strdup(token);
+		token = strtok(NULL, delimiter);
+		counter++;
+	}
+	token_necklace[counter] = token;
+	return (token_necklace);
+}
