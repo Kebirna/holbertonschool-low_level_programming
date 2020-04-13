@@ -1,0 +1,23 @@
+total 112
+drwxrwxr-x 18 juanfe juanfe  4096 Apr 13 17:10 .
+drwxrwxr-x  5 juanfe juanfe  4096 Apr 13 17:13 ..
+drwxrwxr-x  8 juanfe juanfe  4096 Apr 13 17:09 .git
+-rw-rw-r--  1 juanfe juanfe  2468 Apr 13 17:09 README.md
+drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 alias
+drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 argcmds
+drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 basiccmds
+drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 cd
+drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 cdextra
+drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 comments
+-rw-rw-r--  1 juanfe juanfe  2035 Apr 13 17:12 config
+-rw-rw-r--  1 juanfe juanfe  1869 Apr 13 17:09 config.bk
+drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 exit
+drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 logic
+drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 logiccont
+drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 semicolon
+drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 setenv
+drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 setlocalvars
+drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:10 shellresults
+drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 subvars
+-rwxrwxr-x  1 juanfe juanfe 26684 Apr 13 17:09 testpipe
+drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 torture
