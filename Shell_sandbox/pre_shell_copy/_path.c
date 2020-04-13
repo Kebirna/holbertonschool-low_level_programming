@@ -2,7 +2,7 @@
 
 extern char **environ;/*takes the environment variable*/
 
-char **_path()
+char **get_path()
 {
 	int counter = 0, size = 0;
 	char *path = NULL;

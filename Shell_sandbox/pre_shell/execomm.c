@@ -7,7 +7,7 @@ int execo(char **args)
 
 	if (!pid)
 	{
-		if(execve(args[0], args, NULL) == -1)
+		if (execve(args[0], args, NULL) == -1)
 		{
 			printf("%s: command not found\n", args[0]);
 			return (-1);
