@@ -1,5 +1,7 @@
 #include "hsh.h"
 
+extern char **environ;/*takes the environment variable*/
+
 int necklace_pearls(char *buffer)
 {
 	int pearls = 0;
@@ -22,12 +24,14 @@ int necklace_pearls(char *buffer)
 	return (pearls);
 }
 
-	char **parsing(char *buffer, int characters)
+char **parsing(char *buffer, int characters, int size_path)
 	{
 		char **token_necklace = malloc(sizeof(char *) * characters);
 		char *token;
 		char *delimiter = " :'\n''\t'";
 		int counter = 0;
+		char **path = NULL;
+		char **args = NULL;
 
 		if (token_necklace == NULL)
 		{
@@ -41,6 +45,11 @@ int necklace_pearls(char *buffer)
 			token = strtok(NULL, delimiter);
 			counter++;
 		}
-		token_necklace[counter] = token;
-		return (token_necklace);
+		token_necklace[counter] = token; /*Here are the args tokenized*/
+		
+		/*START OF THE PATH WORK*/
+		path = _path(size_path);
+		args = _insert_path(token_necklace, path);
+
+		return (args);
 	}

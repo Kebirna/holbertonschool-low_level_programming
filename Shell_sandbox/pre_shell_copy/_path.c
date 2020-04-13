@@ -2,16 +2,19 @@
 
 extern char **environ;/*takes the environment variable*/
 
+<<<<<<< HEAD
 char **get_path()
+=======
+char **_path(int size)
+>>>>>>> 6928064c5e418891577c99233e72c6af86607f09
 {
-	int counter = 0, size = 0;
-	char *path = NULL;
+	int counter = 0, path_position = 0;
+	char *path = NULL, *reservoir = NULL;
 	char *token = NULL;
 	char *delimiter = "=:";
-	char **path_necklace = NULL;
-
+	char **path_necklace = malloc(sizeof(char *) * size + 1);
+	
 	size = necklace_pearls(*environ);
-	path_necklace = malloc(sizeof(char *) * size + 1);
 	while(environ[counter] != NULL)
 	{
 		if(strstr(environ[counter], "PATH") != NULL)/*Search for PATH in environment*/
@@ -20,10 +23,16 @@ char **get_path()
 		
 		/*printf("%d ", counter);*/
 	}
-	path = environ[counter];
+	reservoir = environ[counter];
+	path = reservoir;
+	path_position = counter;
+
+	printf("Environ: %s\n", path);
 	counter = 0;
 	strtok(path, delimiter);/* This gets rids of the "PATH="" part */
+	printf("Environ 2: %s\n", path);
 	token = strtok(NULL, delimiter); /* Here we start to take dir paths*/
+	printf("Environ 3: %s\n", token);
 	while(token != NULL)
 	{
 		path_necklace[counter] = strdup(token);
@@ -31,10 +40,12 @@ char **get_path()
 		counter++;
 	}
 	path_necklace[counter] = token;
+	path = environ[path_position];
+	printf("Environ 3 stage: %s\n", path);
 	return(path_necklace);
 }
 
-char *_insert_path(char **args, char **path)
+char **_insert_path(char **args, char **path)
 {
 	char *cwd = getcwd(NULL, 0);
 	struct stat *verify = malloc(sizeof(struct stat));
@@ -52,6 +63,7 @@ char *_insert_path(char **args, char **path)
 		}
 		counter++;
 	}
+	free(verify);
 	chdir(cwd);
-	return(args[0]);
+	return(args);
 }
