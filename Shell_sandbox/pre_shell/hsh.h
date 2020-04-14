@@ -12,6 +12,9 @@
 
 extern char **environ;
 
+int loop;
+
+
 void change_equal_sig(char *str);
 char *ret_path_line();
 char **get_path(char *args);
