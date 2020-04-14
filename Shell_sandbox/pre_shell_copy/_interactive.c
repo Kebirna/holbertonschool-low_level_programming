@@ -7,6 +7,8 @@ int _interactive(char **av __attribute__((unused)))
 	char **args = NULL;
 	char **env_args = NULL;
 	char *tmp = NULL;
+	int (*b_func)() = NULL; /*Pointer to function for builtins*/
+	int builtin_return = 0;
 	int size;
 	int size_args = 0;
 	int i = 0;
@@ -14,13 +16,21 @@ int _interactive(char **av __attribute__((unused)))
 	int flag = 0;
 
 	while(1)
-	{
-		
+	{	
 		write(STDOUT_FILENO, "$ ", 2);
 		if (getline(&buffer, &bufsiz, stdin) != EOF)
 		{
 			size = necklace_pearls(buffer);
-			args = parsing(buffer, size);
+			args = parsing(buffer, size); /* From here we call the builtins */
+			b_func = find_builtins(*args);
+			if (b_func != NULL)
+			{
+				builtin_return = b_func();
+				if(_strcmp(args[0], "exit") == 0 && builtin_return == 2)
+					return(0);/*Here memory should be freed*/
+				if(builtin_return == 0)
+					continue;
+			}
 			if (strcmp(args[0], "exit") == 0)
 			{
 				freedom(args, size);
@@ -42,5 +52,5 @@ int _interactive(char **av __attribute__((unused)))
 			break;
 		}	
 	}
-	return (0);
+	return(0);
 }
