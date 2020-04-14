@@ -9,11 +9,22 @@
 #include <sys/wait.h>
 #include <sys/stat.h>
 #include <sys/types.h>
-
+ #include <errno.h>
+ 
 extern char **environ;
+
+typedef struct builtin {
+	char *b_name;
+	int (*b_func)();
+}builtin_struct;
 
 int loop;
 
+
+/*Builtin functions*/
+int (*find_builtins(char *user_input))();
+int exit_func();
+int env_func();
 
 void change_equal_sig(char *str);
 char *ret_path_line();
