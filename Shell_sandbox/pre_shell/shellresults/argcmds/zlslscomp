@@ -1,4 +1,5 @@
 alias
+a.out
 argcmds
 basiccmds
 cd
@@ -18,6 +19,7 @@ subvars
 testpipe
 torture
 alias
+a.out
 argcmds
 basiccmds
 cd

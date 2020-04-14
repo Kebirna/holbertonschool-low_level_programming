@@ -12,15 +12,21 @@ int _interactive(char **av __attribute__((unused)))
 	int i = 0;
 	int j = 0;
 	int flag = 0;
+	int len = 0;
+	loop = 0;
 
 	while(1)
 	{
 		
 		write(STDOUT_FILENO, "#cisfun$ ", 9);
-		if (getline(&buffer, &bufsiz, stdin) != EOF)
-		{
+		if (len = getline(&buffer, &bufsiz, stdin) != EOF)
+		{	
+			if (buffer[0] == 10)
+				continue;
+			
 			size = necklace_pearls(buffer);
 			args = parsing(buffer, size);
+
 			if (strcmp(args[0], "exit") == 0)
 			{
 				freedom(args, size);
@@ -34,7 +40,8 @@ int _interactive(char **av __attribute__((unused)))
 			}
 			args[0] = _insert_path(args, env_args);
 			execo(args);
-			freedom(args, size);
+			loop++;
+			
 		}
 		else
 		{

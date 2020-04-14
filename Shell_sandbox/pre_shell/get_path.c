@@ -53,6 +53,9 @@ char *_insert_path(char **args, char **path)
 	char *ptr_path;
 	char *result;
 
+	
+
+
 	if (strstr(args[0], "/"))
 	{
 		tmp2 = args[0];
@@ -62,7 +65,7 @@ char *_insert_path(char **args, char **path)
 		while (path[counter] != NULL)
 		{
 
-			chdir(path[counter]); /* It goes to each dir in path*/
+			chdir(path[counter]); 
 			if (stat(args[0], verify) == 0)
 			{
 				tmp1 = strdup(args[0]);
@@ -75,5 +78,9 @@ char *_insert_path(char **args, char **path)
 		}
 	}
 	chdir(cwd);
+	if (tmp2 == NULL)
+	{
+		tmp2 = args[0];
+	}
 	return (tmp2);
 }
