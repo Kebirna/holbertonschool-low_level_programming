@@ -69,7 +69,7 @@ char *_insert_path(char **args, char **path)
 			if (stat(args[0], verify) == 0)
 			{
 				tmp1 = strdup(args[0]);
-				tmp2 = strdup(path[counter]);
+				tmp2 = strdup(path[counter]);  /***  ./   a.out                  */
 				strcat(tmp2, "/");
 				strcat(tmp2, tmp1);
 				break;

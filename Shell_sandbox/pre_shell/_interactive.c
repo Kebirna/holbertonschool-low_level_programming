@@ -15,7 +15,8 @@ int _interactive(char **av __attribute__((unused)))
 	int j = 0;
 	int flag = 0;
 	
-	loop  = 1;
+	
+
 
 	while(1)
 	{	

@@ -10,7 +10,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
  #include <errno.h>
- 
+
 extern char **environ;
 
 typedef struct builtin {
@@ -19,7 +19,9 @@ typedef struct builtin {
 }builtin_struct;
 
 int loop;
+char *hsh_home;
 
+char* itoa(int num, char* str, int base);
 
 /*Builtin functions*/
 int (*find_builtins(char *user_input))();

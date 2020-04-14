@@ -37,7 +37,7 @@ char* itoa(int num, char* str, int base)
     str[i] = '\0'; // Append string terminator 
   
     // Reverse the string 
-    reverse(str, i); 
+    /*reverse(str, i); */
   
     return str; 
 } 

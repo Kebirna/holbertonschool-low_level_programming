@@ -12,7 +12,7 @@
 	char **env_args = NULL;
 	int flag = 0;
 	
-	loop = 0;
+	
 
 	while ((len = getline(&buffer, &bufsiz, stdin)) > 0)
 	{
