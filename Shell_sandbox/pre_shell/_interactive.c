@@ -16,7 +16,7 @@ int _interactive(char **av __attribute__((unused)))
 	while(1)
 	{
 		
-		write(STDOUT_FILENO, "$ ", 2);
+		write(STDOUT_FILENO, "#cisfun$ ", 9);
 		if (getline(&buffer, &bufsiz, stdin) != EOF)
 		{
 			size = necklace_pearls(buffer);
