@@ -12,6 +12,13 @@
 
 extern char **environ;
 
+
+typedef struct builtin {
+	char *b_name;
+	int (*b_func)();
+}builtin_struct;
+
+
 void change_equal_sig(char *str);
 char *ret_path_line();
 char **get_path(char *args);
@@ -23,5 +30,10 @@ int _interactive(char **av __attribute__((unused)));
 int necklace_pearls(char *buffer);
 char **parsing(char *buffer, int characters);
 int execo(char **args);
+
+/*Builtin functions*/
+int (*find_builtins(char *user_input))();
+int exit_func();
+int env_func();
 
 #endif
