@@ -1,29 +1,24 @@
-# Holberton Shell
-This is a simple shell with basic functionality made for learning purposes
+# :shell: An awesome Holberton Shell :shell:
+ This is a simple shell built in C language with basic functionality. 
 
-## Getting Started
+## Motivation
+This project is made for learning purposes and because ***#CisFun***. 
+It is part of the **Unit 00 - Programming foundations** at [Holberton School](https://www.holbertonschool.com/pathway_foundations).
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-What things you need to install the software and how to install them
-
-Give examples
+## Prerequisites
+As this shell is built upon Ubuntu trusty 14.04 LTS, please use a compatible operating system. 
 
 ### Installation
+Compile this way:
 
-This is a demo
-
-```bash
-sudo get-apt ssh
+```
+gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 ```
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-Give the example
-And repeat
+And then, inside the directory of compiling of using the absoulute path of it, do: 
+```
+./hsh
+```
 
 ## Running the tests
 Explain how to run the automated tests for this system
@@ -50,10 +45,9 @@ Please read CONTRIBUTING.md for details on our code of conduct, and the process 
 We use SemVer for versioning. For the versions available, see the tags on this repository.
 
 ## Authors
-Ricardo Hincapie - Holberton Student - [@RicarHincapie](https://www.linkedin.com/in/ricardohincapie/)
+@github/ricarhincapie Ricardo Hincapie - Holberton Student - [@RicarHincapie](https://www.linkedin.com/in/ricardohincapie/)
 
-Juan Felipe Bustamante - Holberton Student - [@PipeBustamante](https://www.linkedin.com/in/pipebustamantem/)
-
+@github/jfbm74 Juan Felipe Bustamante - Holberton Student - [@PipeBustamante](https://www.linkedin.com/in/pipebustamantem/)
 See also the list of contributors who participated in this project.
 
 ## License
