@@ -73,7 +73,7 @@ Please, contact us if you are interested in continue this project. We would be e
 ## Authors
 Ricardo Hincapie - Software Developer - [@RicarHincapie](https://www.linkedin.com/in/ricardohincapie/)
 
-> :rocket: Let's follow each other in [Github](https://github.com/ricarhincapie)
+> :rocket: Let's follow each other on [Github](https://github.com/ricarhincapie)
 
 Juan Felipe Bustamante - Software Developer - [@PipeBustamante](https://www.linkedin.com/in/pipebustamantem/)
 
