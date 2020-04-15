@@ -34,9 +34,11 @@ Explain what these tests test and why
 Give an example
 
 ### And coding style tests
-[Holberton School coding style](https://github.com/holbertonschool/Betty/wiki), which is inspired and slightly midifies the [Linux kernel coding style](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/Documentation/process/coding-style.rst)
+[Holberton School coding style](https://github.com/holbertonschool/Betty/wiki), which is inspired and slightly modifies the [Linux kernel coding style](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/Documentation/process/coding-style.rst)
 
-#### Indentation example. Tabs equals to 4 spaces:
+#### Indentation example. 
+
+Tabs equals to 4 spaces:
 ```
 int sample_func(char suffix)
 {
@@ -52,11 +54,11 @@ int sample_func(char suffix)
 }
 ```
 #### Lenght of lines
-The limit on the length of lines is 80 columns and this is a strongly preferred limit.
+The limit on the length of lines is **80 columns** and this is a strongly preferred limit.
 
 #### Lenght of functions
 Functions should be short and sweet, and do just one thing.
-They must fit on 40 lines, and do one thing and do that well.
+They must fit on **40 lines**, and do one thing and do that well.
 
 ## Built With
 Visual Basic Code
@@ -70,11 +72,11 @@ Please, contact us if you are interested in continue this project. We would be e
 ## Authors
 Ricardo Hincapie - Software Developer - [@RicarHincapie](https://www.linkedin.com/in/ricardohincapie/)
 
-Let's follow each other in [Github](https://github.com/ricarhincapie)
+> :rocket: Let's follow each other in [Github](https://github.com/ricarhincapie)
 
 Juan Felipe Bustamante - Software Developer - [@PipeBustamante](https://www.linkedin.com/in/pipebustamantem/)
 
-Let's follow each other in [Github](https://github.com/jfbm74)
+> :rocket: Let's connect! [Github](https://github.com/jfbm74)
 
 See also the list of contributors who participated in this project.
 
@@ -83,3 +85,4 @@ This project is not licensed.
 
 ## Acknowledgments
 To our families, for whom all the effort is worth it.
+To the coding global community, for its efforts to keep knowledge available. 
