@@ -3,7 +3,7 @@
 int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 {
 	int int_mode = 1;
-
+	int errcode = 0;
 	loop  = 1;
 
 	hsh_home =   av[0];
