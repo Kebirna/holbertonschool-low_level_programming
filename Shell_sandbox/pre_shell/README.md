@@ -1,5 +1,5 @@
-# An awesome Holberton Shell
-:shell: This is a simple shell built in C language with basic functionality. :shell:
+# :shell: An awesome Holberton Shell :shell:
+ This is a simple shell built in C language with basic functionality. 
 
 ## Motivation
 This project is made for learning purposes and because ***#CisFun***. 
