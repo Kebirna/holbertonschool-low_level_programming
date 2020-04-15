@@ -12,7 +12,7 @@ As this shell is built upon Ubuntu trusty 14.04 LTS, please use a compatible ope
 
 ### Installation
 
-Clone the repository at: [Simple Shell Project] (https://github.com/ricarhincapie/simple_shell.git)
+Clone the repository at: [Simple Shell Project](https://github.com/ricarhincapie/simple_shell.git)
 
 Compile this way:
 
@@ -34,7 +34,7 @@ Explain what these tests test and why
 Give an example
 
 ### And coding style tests
-[Holberton School coding style] (https://github.com/holbertonschool/Betty/wiki), which is inspired and slightly midifies the [Linux kernel coding style] (https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/Documentation/process/coding-style.rst)
+[Holberton School coding style](https://github.com/holbertonschool/Betty/wiki), which is inspired and slightly midifies the [Linux kernel coding style](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/Documentation/process/coding-style.rst)
 
 #### Indentation example. Tabs equals to 4 spaces:
 ```
@@ -69,9 +69,11 @@ Please, contact us if you are interested in continue this project. We would be e
 
 ## Authors
 Ricardo Hincapie - Software Developer - [@RicarHincapie](https://www.linkedin.com/in/ricardohincapie/)
+
 Let's follow each other in [Github](https://github.com/ricarhincapie)
 
 Juan Felipe Bustamante - Software Developer - [@PipeBustamante](https://www.linkedin.com/in/pipebustamantem/)
+
 Let's follow each other in [Github](https://github.com/jfbm74)
 
 See also the list of contributors who participated in this project.
