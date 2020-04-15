@@ -1,6 +1,6 @@
 ![](images/header_image.png)
 
-# An awesome Holberton Shell
+# Simple Shell Project
  This is a simple shell built in C language with basic functionality. 
 
 ## Motivation
