@@ -1,8 +1,8 @@
-total 156
+total 132
 drwxrwxr-x 18 juanfe juanfe  4096 Apr 14 17:29 .
-drwxrwxr-x  6 juanfe juanfe  4096 Apr 14 17:24 ..
+drwxrwxr-x  6 juanfe juanfe  4096 Apr 15 07:57 ..
 drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 alias
--rwxrwxr-x  1 juanfe juanfe 42976 Apr 14 17:27 a.out
+-rwxrwxr-x  1 juanfe juanfe 18728 Apr 15 07:58 a.out
 drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 argcmds
 drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 18:17 basiccmds
 drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 cd
@@ -11,7 +11,7 @@ drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 comments
 -rw-rw-r--  1 juanfe juanfe  2035 Apr 14 17:29 config
 -rw-rw-r--  1 juanfe juanfe  1869 Apr 13 17:09 config.bk
 drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 exit
-drwxrwxr-x  8 juanfe juanfe  4096 Apr 14 17:10 .git
+drwxrwxr-x  8 juanfe juanfe  4096 Apr 14 20:10 .git
 drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 logic
 drwxrwxr-x  2 juanfe juanfe  4096 Apr 13 17:09 logiccont
 -rw-rw-r--  1 juanfe juanfe  2468 Apr 13 17:09 README.md

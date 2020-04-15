@@ -14,9 +14,6 @@ int _interactive(char **av __attribute__((unused)))
 	int i = 0;
 	int j = 0;
 	int flag = 0;
-	
-	
-
 
 	while(1)
 	{	
@@ -39,7 +36,7 @@ int _interactive(char **av __attribute__((unused)))
 			}
 			if (strcmp(args[0], "exit") == 0)
 			{
-				freedom(args, size);
+				
 				exit(0);
 			}
 			/**TEAM DEVELOPMENT PLEASE TRY TO AVOID THIS FLAG CONDITION*/
