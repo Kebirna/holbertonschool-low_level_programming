@@ -19,10 +19,11 @@ void change_equal_sig(char *str)
 char *ret_path_line()
 {
 	int i = 0;
+	char **copy_environ = NULL;
 
 	for (i = 0; environ[i] != NULL; i++)
 	{
-		if (strcmp(environ[i], "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin") == 0)
+		if (strncmp(environ[i], "PATH", 4) == 0) /*This takes only the first 4 bytes*/
 			break;
 	}
 	/***PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin*/
@@ -50,7 +51,12 @@ char *_insert_path(char **args, char **path)
 	int counter = 0;
 	char *tmp1 = NULL;
 	char *tmp2 = NULL;
+	char *ptr_path;
+	char *result;
+
 	
+
+
 	if (strstr(args[0], "/"))
 	{
 		tmp2 = args[0];
