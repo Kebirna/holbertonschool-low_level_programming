@@ -19,6 +19,7 @@ void change_equal_sig(char *str)
 char *ret_path_line()
 {
 	int i = 0;
+	char **copy_environ = NULL;
 
 	for (i = 0; environ[i] != NULL; i++)
 	{
@@ -50,7 +51,12 @@ char *_insert_path(char **args, char **path)
 	int counter = 0;
 	char *tmp1 = NULL;
 	char *tmp2 = NULL;
+	char *ptr_path;
+	char *result;
+
 	
+
+
 	if (strstr(args[0], "/"))
 	{
 		tmp2 = args[0];
