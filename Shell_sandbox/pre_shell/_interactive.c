@@ -49,7 +49,7 @@ int _interactive(char **av __attribute__((unused)))
 				flag = 1;
 			}
 			args[0] = _insert_path(args, env_args);
-			execo(args);
+			errcode = execo(args);
 			freedom(args, size);
 			loop++;
 		}
@@ -59,5 +59,5 @@ int _interactive(char **av __attribute__((unused)))
 			break;
 		}	
 	}
-	return(0);
+	return(errcode);
 }

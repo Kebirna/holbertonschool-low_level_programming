@@ -20,6 +20,7 @@ typedef struct builtin {
 
 int loop;
 char *hsh_home;
+int errcode;
 
 char* itoa(int num, char* str, int base);
 
