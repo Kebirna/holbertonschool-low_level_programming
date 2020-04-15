@@ -11,6 +11,9 @@ It is part of the **Unit 00 - Programming foundations** at [Holberton School](ht
 As this shell is built upon Ubuntu trusty 14.04 LTS, please use a compatible operating system. 
 
 ### Installation
+
+Clone the repository at: [Simple Shell Project] (https://github.com/ricarhincapie/simple_shell.git)
+
 Compile this way:
 
 ```
@@ -31,25 +34,46 @@ Explain what these tests test and why
 Give an example
 
 ### And coding style tests
-Explain what these tests test and why
+[Holberton School coding style] (https://github.com/holbertonschool/Betty/wiki), which is inspired and slightly midifies the [Linux kernel coding style] (https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/Documentation/process/coding-style.rst)
 
-Give an example
+#### Indentation example. Tabs equals to 4 spaces:
+```
+int sample_func(char suffix)
+{
+    int var;
+    var = 0;
+    switch (suffix)
+    {
+    case 'G':
+    case 'g':
+        var = 30;
+        break;
+     }
+}
+```
+#### Lenght of lines
+The limit on the length of lines is 80 columns and this is a strongly preferred limit.
+
+#### Lenght of functions
+Functions should be short and sweet, and do just one thing.
+They must fit on 40 lines, and do one thing and do that well.
 
 ## Built With
 Visual Basic Code
 Ubuntu 14.04 LTS
 
 
-Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+## Contributing
+Please, contact us if you are interested in continue this project. We would be excited to give you a short introduction to it. 
 
-## Versioning
-We use SemVer for versioning. For the versions available, see the tags on this repository.
 
 ## Authors
-@github/ricarhincapie Ricardo Hincapie - Holberton Student - [@RicarHincapie](https://www.linkedin.com/in/ricardohincapie/)
+Ricardo Hincapie - Software Developer - [@RicarHincapie](https://www.linkedin.com/in/ricardohincapie/)
+Let's follow each other in [Github](https://github.com/ricarhincapie)
 
-@github/jfbm74 Juan Felipe Bustamante - Holberton Student - [@PipeBustamante](https://www.linkedin.com/in/pipebustamantem/)
+Juan Felipe Bustamante - Software Developer - [@PipeBustamante](https://www.linkedin.com/in/pipebustamantem/)
+Let's follow each other in [Github](https://github.com/jfbm74)
+
 See also the list of contributors who participated in this project.
 
 ## License
