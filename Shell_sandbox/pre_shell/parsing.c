@@ -24,7 +24,7 @@ int necklace_pearls(char *buffer)
 
 char **parsing(char *buffer, int characters)
 {
-	char **token_necklace = malloc(sizeof(char *) * 1024);
+	char **token_necklace = malloc(sizeof(char *) * characters);
 	char *token;
 	char *delimiter = " :'\n''\t'";
 	int counter = 0;

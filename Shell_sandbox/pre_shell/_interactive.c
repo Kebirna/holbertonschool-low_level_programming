@@ -6,13 +6,9 @@ int _interactive(char **av __attribute__((unused)))
 	size_t bufsiz;
 	char **args = NULL;
 	char **env_args = NULL;
-	char *tmp = NULL;
 	int (*b_func)() = NULL; /*Pointer to function for builtins*/
 	int builtin_return = 0;
 	int size;
-	int size_args = 0;
-	int i = 0;
-	int j = 0;
 	int flag = 0;
 
 	while(1)
