@@ -1,4 +1,4 @@
-![(images/header_image.png)]
+![](images/header_image.png)
 
 # An awesome Holberton Shell
  This is a simple shell built in C language with basic functionality. 
