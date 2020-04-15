@@ -22,7 +22,7 @@ char *ret_path_line()
 
 	for (i = 0; environ[i] != NULL; i++)
 	{
-		if (strcmp(environ[i], "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin") == 0)
+		if (strncmp(environ[i], "PATH", 4) == 0) /*This takes only the first 4 bytes*/
 			break;
 	}
 	/***PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin*/

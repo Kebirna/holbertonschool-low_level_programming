@@ -24,12 +24,20 @@ int _interactive(char **av __attribute__((unused)))
 			b_func = find_builtins(*args);
 			if (b_func != NULL)
 			{
-				builtin_return = b_func();
+				if (b_func == exit_func)
+				{
+					freedom(args, size);
+					free(buffer);
+				}
+					builtin_return = b_func();
+				/*
 				if(strcmp(args[0], "exit") == 0 && builtin_return == 2)
-					return(0);/*Here memory should be freed*/
+					return(0);
 				if(builtin_return == 0)
 					continue;
+				*/
 			}
+			/*
 			if (strcmp(args[0], "exit") == 0)
 			{
 				
@@ -44,6 +52,7 @@ int _interactive(char **av __attribute__((unused)))
 			args[0] = _insert_path(args, env_args);
 			errcode = execo(args);
 			freedom(args, size);
+			free(buffer);
 			loop++;
 		}
 		else

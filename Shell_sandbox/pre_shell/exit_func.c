@@ -2,6 +2,6 @@
 
 int exit_func()
 {
-	printf("Adios\n");
-	exit(2);
+	
+	exit(0);
 }
