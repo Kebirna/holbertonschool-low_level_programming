@@ -1,18 +1,22 @@
 #include "hsh.h"
-
-int _interactive(char **av __attribute__((unused)))
+/**
+ * _interactive - Creates a loop that execute command lines entered by tty
+ * @av: argument from main
+ * Return: Exit / Error Code
+*/
+int _interactive(char **av)
 {
 	char *buffer = NULL;
 	size_t bufsiz;
 	char **args = NULL;
 	char **env_args = NULL;
-	int (*b_func)() = NULL; /*Pointer to function for builtins*/
+	int (*b_func)() = NULL;
 	int builtin_return = 0;
 	int size;
 	int flag = 0;
 
-	while(1)
-	{	
+	while (1)
+	{
 		write(STDOUT_FILENO, "$ ", 2);
 		if (getline(&buffer, &bufsiz, stdin) != EOF)
 		{
@@ -27,29 +31,11 @@ int _interactive(char **av __attribute__((unused)))
 				if (b_func == exit_func)
 				{
 					if (env_args != NULL)
-					{
 						freedom(2, env_args);
-					}
-					
 					freedom(2, args);
-					
-					free(buffer);
 				}
-					builtin_return = b_func();
-				/*
-				if(strcmp(args[0], "exit") == 0 && builtin_return == 2)
-					return(0);
-				if(builtin_return == 0)
-					continue;
-				*/
+				builtin_return = b_func();
 			}
-			/*
-			if (strcmp(args[0], "exit") == 0)
-			{
-				
-				exit(0);
-			}
-			/**TEAM DEVELOPMENT PLEASE TRY TO AVOID THIS FLAG CONDITION*/
 			if (flag == 0)
 			{
 				env_args = getenvpath();
@@ -58,14 +44,13 @@ int _interactive(char **av __attribute__((unused)))
 			args[0] = _insert_path(args, env_args);
 			errcode = execo(args);
 			freedom(2, args);
-			free(buffer);
 			loop++;
 		}
 		else
 		{
 			write(STDOUT_FILENO, "\n", 1);
 			break;
-		}	
+		}
 	}
-	return(errcode);
+	return (errcode);
 }

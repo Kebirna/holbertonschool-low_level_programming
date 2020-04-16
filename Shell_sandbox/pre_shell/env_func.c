@@ -1,9 +1,12 @@
 #include "hsh.h"
-
-int env_func()
+/**
+ * env_func - Prints eviroment variables
+ * Return: 0 on success
+*/
+int env_func(void)
 {
 	int counter = 0, lenght = 0;
-	
+
 	while (environ[counter] != NULL)
 	{
 		lenght = strlen(environ[counter]);
@@ -12,5 +15,5 @@ int env_func()
 		counter++;
 	}
 	write(STDOUT_FILENO, "\n", 1);
-	return(0);
+	return (0);
 }

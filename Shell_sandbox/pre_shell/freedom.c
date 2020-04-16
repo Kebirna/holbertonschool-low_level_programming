@@ -1,4 +1,9 @@
 #include "hsh.h"
+/**
+* freedom - free the memory of double pointer
+* @n: 1 is Pointer, 2 is double pointer
+* Return: nothing
+*/
 
 void freedom(int n, ...)
 {
@@ -12,9 +17,9 @@ void freedom(int n, ...)
 	if (n == 1)
 	{
 		ptr1 = va_arg(arg, char *);
-		free(ptr1);		
+		free(ptr1);
 	}
-	
+
 	if (n == 2)
 	{
 		ptr2 = va_arg(arg, char **);
@@ -25,8 +30,4 @@ void freedom(int n, ...)
 		}
 		free(ptr2);
 	}
-	
-	
-	
-	
 }

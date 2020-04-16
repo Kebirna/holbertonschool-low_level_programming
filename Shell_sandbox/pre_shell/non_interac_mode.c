@@ -1,8 +1,10 @@
 #include "hsh.h"
-
-
-
-    int non_interactive_mode(char **av __attribute__((unused)))
+/**
+ * non_interactive_mode - executes command lines entered by pipe
+ * @av: program name
+ * Return: 0
+*/
+int non_interactive_mode(char **av)
 {
 	char *buffer = NULL;
 	size_t bufsiz;
@@ -11,22 +13,16 @@
 	int len = 0;
 	char **env_args = NULL;
 	int flag = 0;
-	
-	
 
 	while ((len = getline(&buffer, &bufsiz, stdin)) > 0)
 	{
 		if (buffer[0] == 10)
-			continue;		
+			continue;
 		size = necklace_pearls(buffer);
 		args = parsing(buffer, size);
-		
+
 		if (strcmp(args[0], "exit") == 0)
-		{
-			
 			exit(0);
-		}
-		/**TEAM DEVELOPMENT PLEASE TRY TO AVOID THIS FLAG CONDITION*/
 		if (flag == 0)
 		{
 			env_args = getenvpath();
@@ -36,6 +32,5 @@
 		execo(args);
 		loop++;
 	}
-	
 	return (0);
 }

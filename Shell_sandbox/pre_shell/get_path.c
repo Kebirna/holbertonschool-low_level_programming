@@ -1,6 +1,10 @@
 #include "hsh.h"
-extern char **environ;
 
+/**
+ * change_equal_sig - Change from a given strings = to : character
+ * @str: given string
+ * Return: Nohing
+*/
 void change_equal_sig(char *str)
 {
 	char **ptr_str = NULL;
@@ -15,20 +19,25 @@ void change_equal_sig(char *str)
 	}
 	ptr_str[0][i] = ':';
 }
-
+/**
+ * ret_path_line - Return Path variable for enviroment
+ * Return: PATH
+*/
 char *ret_path_line()
 {
 	int i = 0;
-	
+
 	for (i = 0; environ[i] != NULL; i++)
 	{
-		if (strncmp(environ[i], "PATH", 4) == 0) /*This takes only the first 4 bytes*/
+		if (strncmp(environ[i], "PATH", 4) == 0)
 			break;
 	}
-	/***PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin*/
 	return (environ[i]);
 }
-
+/**
+ * getenvpath - Returns tokenized path enviroment
+ * Return: Returns tokenized path enviroment
+*/
 char **getenvpath()
 {
 	char *tmp = NULL;
@@ -42,7 +51,12 @@ char **getenvpath()
 	tmp =  NULL;
 	return (env_args);
 }
-
+/**
+ * _insert_path - Inserts the directory into given command
+ * @args: given command
+ * @path: tokenized path enviroment
+ * Return: Full path command if exists or just a given command
+*/
 char *_insert_path(char **args, char **path)
 {
 	char *cwd = getcwd(NULL, 0);
@@ -62,11 +76,11 @@ char *_insert_path(char **args, char **path)
 		while (path[counter] != NULL)
 		{
 
-			chdir(path[counter]); 
+			chdir(path[counter]);
 			if (stat(args[0], verify) == 0)
 			{
 				tmp1 = strdup(args[0]);
-				tmp2 = strdup(path[counter]);  
+				tmp2 = strdup(path[counter]);
 				strcat(tmp2, "/");
 				strcat(tmp2, tmp1);
 				break;
