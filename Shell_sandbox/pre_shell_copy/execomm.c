@@ -1,5 +1,9 @@
 #include "hsh.h"
-
+/**
+ * execo - Executes a given command
+ * @args: Given command
+ * Return: Exit = 0 or Error Number
+*/
 int execo(char **args)
 {
 	int status;
@@ -7,15 +11,16 @@ int execo(char **args)
 
 	if (!pid)
 	{
-		if (execve(args[0], args, NULL) == -1)
+		if (execve(args[0], args, environ) == -1)
 		{
-			printf("%s: command not found\n", args[0]);
-			return (-1);
+			int errcode = errno;
+
+			error_msg(args);
+			exit(errcode);
 		}
 	}
 	else
-	{
 		wait(&status);
-	}
-	return (0);
+	errcode = 0;
+	return (errcode);
 }

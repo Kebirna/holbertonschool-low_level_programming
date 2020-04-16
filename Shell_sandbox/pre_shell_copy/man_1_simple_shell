@@ -5,31 +5,41 @@
 - Command interpreter simplyfied
 
 .SH SYNOPSIS
-.B [-aCefnuvxIimqVEb] [+aCefnuvxIimqVEb] 
-.R [-o option_name] [+o option_name] [command_file [argument ...]]
+.B [Command] [-OPTIONS] [FILE]
+.R
 
 .SH DESCRIPTION
-.B Simple Shell 
-- is a simple command interpreter for Linux 14.04 LTS. It provides a variety of functions that the actual DASH shell from Linux has.
+.B Simple Shell
+- is a simple command interpreter for Linux 14.04 LTS. It provides a variety of functions that the actual SH shell from Linux.
 .PP
 It is the final project of the low-level study programm at Holberton School.
 
 .SH OPTIONS
+.B [-all the standard]
+.PP
+.B [env]
+- print the environmental variables
+.PP
+.B [exit]
+- exits the shell and sets errno to the last error.
 
 .SH ENVIRONMENT
-HOME Set automatically.
+It automatically searches you local PATH variable and sets it.
 
-PATH The default search path for executables.
 
 .SH EXIT STATUS
 
-Errors that are detected by the shell, such as a syntax error, will cause the Simple Shell to exit with a non-zero exit status.
+It conforms with the Standard Linux error codes.
 
 .SH SEE ALSO
 sh(1)
+.PP
+bash(1)
+.PP
+
 
 .SH BUGS
-Does not have bugs at the moment
+Does not have identified bugs at the moment
 
 .SH AUTHORS
 Ricardo Hincapie - (https://www.linkedin.com/in/ricardohincapie/)

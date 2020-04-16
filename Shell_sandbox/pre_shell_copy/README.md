@@ -1,29 +1,30 @@
-# Holberton Shell
-This is a simple shell with basic functionality made for learning purposes
+![](images/header_image.png)
 
-## Getting Started
+# Simple Shell Project
+ This is a simple shell built in C language with basic functionality.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+## Motivation
+This project is made for learning purposes and because ***#CisFun***.
 
-### Prerequisites
-What things you need to install the software and how to install them
+It is part of the **Unit 00 - Programming foundations** at [Holberton School](https://www.holbertonschool.com/pathway_foundations).
 
-Give examples
+## Prerequisites
+As this shell is built upon Ubuntu trusty 14.04 LTS, please use a compatible operating system.
 
 ### Installation
 
-This is a demo
+Clone the repository at: [Simple Shell Project](https://github.com/ricarhincapie/simple_shell.git)
 
-```bash
-sudo get-apt ssh
+Compile this way:
+
+```
+gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 ```
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-Give the example
-And repeat
+And then, inside the directory of compiling of using the absoulute path of it, do:
+```
+./hsh
+```
 
 ## Running the tests
 Explain how to run the automated tests for this system
@@ -34,25 +35,49 @@ Explain what these tests test and why
 Give an example
 
 ### And coding style tests
-Explain what these tests test and why
+[Holberton School coding style](https://github.com/holbertonschool/Betty/wiki), which is inspired and slightly modifies the [Linux kernel coding style](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/Documentation/process/coding-style.rst)
 
-Give an example
+#### Indentation example
+
+Tabs equals to 4 spaces:
+```
+int sample_func(char suffix)
+{
+    int var;
+    var = 0;
+    switch (suffix)
+    {
+    case 'G':
+    case 'g':
+        var = 30;
+        break;
+     }
+}
+```
+#### Lenght of lines
+The limit on the length of lines is **80 columns** and this is a strongly preferred limit.
+
+#### Lenght of functions
+Functions should be short and sweet, and do just one thing.
+They must fit on **40 lines**, and do one thing and do that well.
 
 ## Built With
 Visual Basic Code
 Ubuntu 14.04 LTS
 
 
-Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+## Contributing
+Please, contact us if you are interested in continue this project. We would be excited to give you a short introduction to it.
 
-## Versioning
-We use SemVer for versioning. For the versions available, see the tags on this repository.
 
 ## Authors
-Ricardo Hincapie - Holberton Student - [@RicarHincapie](https://www.linkedin.com/in/ricardohincapie/)
+Ricardo Hincapie - Software Developer - [@RicarHincapie](https://www.linkedin.com/in/ricardohincapie/)
 
-Juan Felipe Bustamante - Holberton Student - [@PipeBustamante](https://www.linkedin.com/in/pipebustamantem/)
+> :rocket: Let's follow each other on [Github](https://github.com/ricarhincapie)
+
+Juan Felipe Bustamante - Software Developer - [@PipeBustamante](https://www.linkedin.com/in/pipebustamantem/)
+
+> :rocket: Let's connect! [Github](https://github.com/jfbm74)
 
 See also the list of contributors who participated in this project.
 
@@ -61,3 +86,5 @@ This project is not licensed.
 
 ## Acknowledgments
 To our families, for whom all the effort is worth it.
+
+To the coding global community, for its efforts to keep knowledge available.

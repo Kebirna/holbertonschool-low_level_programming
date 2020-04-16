@@ -1,5 +1,9 @@
 #include "hsh.h"
-
+/**
+ * necklace_pearls - counts commands and options entered by user
+ * @buffer: given command
+ * Return: Number of arguments
+*/
 int necklace_pearls(char *buffer)
 {
 	int pearls = 0;
@@ -21,25 +25,27 @@ int necklace_pearls(char *buffer)
 	}
 	return (pearls + 1);
 }
-
+/**
+ * parsing - Function that splits a given string
+ * @buffer: Given string
+ * @characters: number of elements
+ * Return: Tokenized string
+*/
 char **parsing(char *buffer, int characters)
 {
-	char **token_necklace = malloc(sizeof(char *) * 1024);
-	char *token;
+	char **token_necklace = malloc(sizeof(char *) * characters);
+	char *token = NULL;
 	char *delimiter = " :'\n''\t'";
 	int counter = 0;
 
-
 	if (token_necklace == NULL)
 	{
-		/*REQUEST TO CHANGE TO DEV TEAM: *PLEASE HANDLE ERROR*/
-		printf("Error");
 		return (NULL);
 	}
 	token = strtok(buffer, delimiter);
 	while (token != NULL)
 	{
-		token_necklace[counter] = strdup(token);
+		token_necklace[counter] = _strdup(token);
 		token = strtok(NULL, delimiter);
 		counter++;
 	}
