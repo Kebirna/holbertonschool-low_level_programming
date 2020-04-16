@@ -6,7 +6,7 @@ int execo(char **args)
 	int status;
 	pid_t pid = fork();
 	char buffer[33];
-	char *error_message = NULL;
+	char *error_message = malloc(sizeof(char) * 255);
 	char *looper = NULL;
 	
 	
@@ -27,6 +27,7 @@ int execo(char **args)
 			error_message =  strcat(error_message, args[0]);
 			int errcode =  errno;
 			perror(error_message);
+			free(error_message);
 			exit(errcode);
 		}
 
@@ -36,6 +37,7 @@ int execo(char **args)
 		wait(&status);
 		
 	}
+	free(error_message);
 	errcode = 0;
 	return (errcode);
 }

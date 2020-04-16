@@ -23,7 +23,7 @@
 		
 		if (strcmp(args[0], "exit") == 0)
 		{
-			freedom(args, size);
+			
 			exit(0);
 		}
 		/**TEAM DEVELOPMENT PLEASE TRY TO AVOID THIS FLAG CONDITION*/

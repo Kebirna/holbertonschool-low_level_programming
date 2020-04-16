@@ -1,10 +1,32 @@
 #include "hsh.h"
 
-void freedom(char **args, int size)
+void freedom(int n, ...)
 {
-	int i;
+	int i = 0;
+	char **ptr2 = NULL;
+	char *ptr1 = NULL;
+	va_list arg;
 
-	for (i = 0; i < size; i++)
-		free(args[i]);
-	free(args);
+	va_start(arg, n);
+
+	if (n == 1)
+	{
+		ptr1 = va_arg(arg, char *);
+		free(ptr1);		
+	}
+	
+	if (n == 2)
+	{
+		ptr2 = va_arg(arg, char **);
+		while (ptr2[i] != NULL)
+		{
+			free(ptr2[i]);
+			i++;
+		}
+		free(ptr2);
+	}
+	
+	
+	
+	
 }

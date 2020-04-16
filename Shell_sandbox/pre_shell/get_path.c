@@ -19,8 +19,7 @@ void change_equal_sig(char *str)
 char *ret_path_line()
 {
 	int i = 0;
-	char **copy_environ = NULL;
-
+	
 	for (i = 0; environ[i] != NULL; i++)
 	{
 		if (strncmp(environ[i], "PATH", 4) == 0) /*This takes only the first 4 bytes*/
@@ -40,7 +39,7 @@ char **getenvpath()
 	change_equal_sig(tmp);
 	size_args = necklace_pearls(tmp);
 	env_args = parsing(tmp, size_args);
-
+	tmp =  NULL;
 	return (env_args);
 }
 
@@ -53,9 +52,6 @@ char *_insert_path(char **args, char **path)
 	char *tmp2 = NULL;
 	char *ptr_path;
 	char *result;
-
-	
-
 
 	if (strstr(args[0], "/"))
 	{
@@ -70,7 +66,7 @@ char *_insert_path(char **args, char **path)
 			if (stat(args[0], verify) == 0)
 			{
 				tmp1 = strdup(args[0]);
-				tmp2 = strdup(path[counter]);  /***  ./   a.out                  */
+				tmp2 = strdup(path[counter]);  
 				strcat(tmp2, "/");
 				strcat(tmp2, tmp1);
 				break;
@@ -83,5 +79,9 @@ char *_insert_path(char **args, char **path)
 	{
 		tmp2 = args[0];
 	}
+	free(tmp1);
+	free(verify);
+	free(cwd);
+	tmp1 =  NULL;
 	return (tmp2);
 }
