@@ -44,10 +44,11 @@ char **get_path(char *args);
 char *_insert_path(char **args, char **path);
 char **getenvpath(void);
 void freedom(int n, ...);
-int non_interactive_mode(void);
+int non_interactive_mode(char **av);
 int _interactive(char **av __attribute__((unused)));
 int necklace_pearls(char *buffer);
 char **parsing(char *buffer, int characters);
 int execo(char **args);
+void free_env(char **env_args, char **args);
 
 #endif

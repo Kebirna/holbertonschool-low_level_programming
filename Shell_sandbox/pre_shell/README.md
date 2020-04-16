@@ -1,15 +1,15 @@
 ![](images/header_image.png)
 
 # Simple Shell Project
- This is a simple shell built in C language with basic functionality. 
+ This is a simple shell built in C language with basic functionality.
 
 ## Motivation
-This project is made for learning purposes and because ***#CisFun***. 
+This project is made for learning purposes and because ***#CisFun***.
 
 It is part of the **Unit 00 - Programming foundations** at [Holberton School](https://www.holbertonschool.com/pathway_foundations).
 
 ## Prerequisites
-As this shell is built upon Ubuntu trusty 14.04 LTS, please use a compatible operating system. 
+As this shell is built upon Ubuntu trusty 14.04 LTS, please use a compatible operating system.
 
 ### Installation
 
@@ -21,7 +21,7 @@ Compile this way:
 gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 ```
 
-And then, inside the directory of compiling of using the absoulute path of it, do: 
+And then, inside the directory of compiling of using the absoulute path of it, do:
 ```
 ./hsh
 ```
@@ -37,7 +37,7 @@ Give an example
 ### And coding style tests
 [Holberton School coding style](https://github.com/holbertonschool/Betty/wiki), which is inspired and slightly modifies the [Linux kernel coding style](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/Documentation/process/coding-style.rst)
 
-#### Indentation example. 
+#### Indentation example
 
 Tabs equals to 4 spaces:
 ```
@@ -67,7 +67,7 @@ Ubuntu 14.04 LTS
 
 
 ## Contributing
-Please, contact us if you are interested in continue this project. We would be excited to give you a short introduction to it. 
+Please, contact us if you are interested in continue this project. We would be excited to give you a short introduction to it.
 
 
 ## Authors
@@ -87,4 +87,4 @@ This project is not licensed.
 ## Acknowledgments
 To our families, for whom all the effort is worth it.
 
-To the coding global community, for its efforts to keep knowledge available. 
+To the coding global community, for its efforts to keep knowledge available.

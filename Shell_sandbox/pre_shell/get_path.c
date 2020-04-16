@@ -20,8 +20,8 @@ void change_equal_sig(char *str)
 	ptr_str[0][i] = ':';
 }
 /**
- * ret_path_line - Return Path variable for enviroment
- * Return: PATH
+ * ret_path_line - Finds the PATH variable from enviroment
+ * Return: pointer position of the PATH variable
 */
 char *ret_path_line()
 {
@@ -35,8 +35,8 @@ char *ret_path_line()
 	return (environ[i]);
 }
 /**
- * getenvpath - Returns tokenized path enviroment
- * Return: Returns tokenized path enviroment
+ * getenvpath - Creates an array of pointers to the PATH directories
+ * Return: Pointer to an array of tokenized directories
 */
 char **getenvpath()
 {
