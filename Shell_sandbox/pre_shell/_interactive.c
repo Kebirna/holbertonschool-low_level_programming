@@ -26,8 +26,13 @@ int _interactive(char **av __attribute__((unused)))
 			{
 				if (b_func == exit_func)
 				{
+					if (env_args != NULL)
+					{
+						freedom(2, env_args);
+					}
+					
 					freedom(2, args);
-					freedom(2, env_args);
+					
 					free(buffer);
 				}
 					builtin_return = b_func();
@@ -53,6 +58,7 @@ int _interactive(char **av __attribute__((unused)))
 			args[0] = _insert_path(args, env_args);
 			errcode = execo(args);
 			freedom(2, args);
+			free(buffer);
 			loop++;
 		}
 		else

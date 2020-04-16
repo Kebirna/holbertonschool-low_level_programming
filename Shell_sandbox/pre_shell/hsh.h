@@ -30,6 +30,7 @@ int (*find_builtins(char *user_input))();
 int exit_func();
 int env_func();
 
+char *_strdup(char *s);
 void change_equal_sig(char *str);
 char *ret_path_line();
 char **get_path(char *args);

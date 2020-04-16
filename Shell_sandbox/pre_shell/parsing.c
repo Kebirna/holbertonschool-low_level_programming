@@ -39,11 +39,11 @@ char **parsing(char *buffer, int characters)
 	token = strtok(buffer, delimiter);
 	while (token != NULL)
 	{
-		token_necklace[counter] = strdup(token);
+		token_necklace[counter] = _strdup(token);
 		token = strtok(NULL, delimiter);
 		counter++;
 	}
 	token_necklace[counter] = token;
-	free((char *)token);
+
 	return (token_necklace);
 }
