@@ -1,10 +1,9 @@
 #include "lists.h"
 
 /**
- * add_dnodeint_end - Adds new node at the end of list
+ * free_dlistint - Frees heap memory
  * @head: list header pointer.
- * @n: node's data
- * Return: direction of new node
+ * Return: nothing
  */
 
 void free_dlistint(dlistint_t *head)
