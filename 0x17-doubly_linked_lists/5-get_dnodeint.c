@@ -14,6 +14,8 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	unsigned int counter = 0;
 	unsigned int counter2 = 0;
 
+	if (!head)
+		return (NULL);
 	while (tmp2->next != '\0')
 	{
 		tmp2 = tmp2->next;
