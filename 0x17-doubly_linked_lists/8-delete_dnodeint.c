@@ -47,8 +47,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		if (tmp->next != NULL)
 			free(tmp);
 		if (tmp->next == NULL)
+		{
 			free(tmp);
 			*head = '\0';
+		}
 	}
 	else/*B case*/
 	{
