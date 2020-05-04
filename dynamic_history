@@ -1,0 +1,50 @@
+ 2058  find . -name "_memcpy.c"
+ 2059  find . -name "_strchr.c"
+ 2060  find . -name "_strspn.c"
+ 2061  find . -name "_strpbrk.c"
+ 2062  find . -name "_strstr.c"
+ 2063  cp ./Shell_sandbox/pre_shell_stable/_strstr.c 0x18-dynamic_libraries/
+ 2064  find . -name '*_strstr.c*'
+ 2065  cp ./Shell_sandbox/pre_shell_stable/_strstr.c 0x18-dynamic_libraries/
+ 2066  find . -name "*_strpbrk.c*"
+ 2067  find . -name '*_strpbrk.c*'
+ 2068  find . -name "*_strspn.c*"
+ 2069  find . -name '*_strspn.c*'
+ 2070  find . -name "*strpbrk.c*"
+ 2071  cp ./0x09-static_libraries/library/4-strpbrk.c 0x18-dynamic_libraries/
+ 2072  find . -name '*strspn.c*'
+ 2073  cp ./0x09-static_libraries/library/3-strspn.c 0x18-dynamic_libraries/
+ 2074  find . -name "*strchr.c*"
+ 2075  cp ./0x09-static_libraries/library/2-strchr.c 0x18-dynamic_libraries/
+ 2076  find . -name "*memcpy.c*"
+ 2077  cp ./0x09-static_libraries/library/1-memcpy.c 0x18-dynamic_libraries/
+ 2078  find . -name "*memset.c*"
+ 2079  cp ./0x09-static_libraries/library/0-memset.c 0x18-dynamic_libraries/
+ 2080  find . -name "*strcmp.c*"
+ 2081  cp ./0x09-static_libraries/library/3-strcmp.c 0x18-dynamic_libraries/
+ 2082  find . -name "*strncpy.c*"
+ 2083  cp ./0x09-static_libraries/library/2-strncpy.c 0x18-dynamic_libraries/
+ 2084  find . -name "*strncat.c*"
+ 2085  cp ./0x09-static_libraries/library/1-strncat.c 0x18-dynamic_libraries/
+ 2086  find . -name "*strcat.c*"
+ 2087  cp ./0x09-static_libraries/library/0-strcat.c 0x18-dynamic_libraries/
+ 2088  find . -name "*atoi*"
+ 2089  cp ./0x14-bit_manipulation/100-atoi.c 0x18-dynamic_libraries/
+ 2090  find . -name "*puts*"
+ 2091  cp ./0x09-static_libraries/library/3-puts.c 0x18-dynamic_libraries/
+ 2092  find . -name "*strlen*"
+ 2093  cp ./0x09-static_libraries/library/2-strlen.c 0x18-dynamic_libraries/
+ 2094  find . -name "*isdigit*"
+ 2095  cp ./0x09-static_libraries/library/1-isdigit.c 0x18-dynamic_libraries/
+ 2096  find . -name "*isupper*"
+ 2097  cp ./0x09-static_libraries/script_test/0-isupper.c 0x18-dynamic_libraries/
+ 2098  find . -name "*abs*"
+ 2099  cp ./0x09-static_libraries/library/6-abs.c 0x18-dynamic_libraries/
+ 2100  find . -name "*isalpha*"
+ 2101  cp ./0x09-static_libraries/library/4-isalpha.c 0x18-dynamic_libraries/
+ 2102  find . -name "*islower*"
+ 2103  cp ./0x09-static_libraries/library/3-islower.c 0x18-dynamic_libraries/
+ 2104  history
+ 2105  history | tail
+ 2106  history 30
+ 2107  history 50 >> dynamic_history 
