@@ -9,7 +9,7 @@
 
 void print_alphabet_x10(void)
 {
-	int rank; 
+	int rank;
 	int letter;
 
 	rank = 0;
