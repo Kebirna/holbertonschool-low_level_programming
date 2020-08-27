@@ -15,7 +15,7 @@ int binary_search(int *array, size_t size, int value)
 	int middle_value = 0;
 
 	if (array == NULL)
-		return(-1);
+		return (-1);
 
 	while (floor <= ceiling)
 	{
